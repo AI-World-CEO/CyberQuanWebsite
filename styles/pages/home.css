@@ -1,0 +1,56 @@
+/* Home page specific styles */
+
+/* Hero Section */
+.hero {
+    text-align: center; /* Center all text and inline elements */
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    position: relative; /* To position decorative elements */
+    max-width: 1200px; /* Optional: Limit width for larger screens */
+    margin: 0 auto; /* Center the hero section within the page */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 10px; /* Rounded corners for aesthetic */
+}
+
+/* Decorative Edge Designs */
+.hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: url('../assets/images/hero-edge.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero::before {
+    top: 0;
+    left: 0;
+}
+
+.hero::after {
+    bottom: 0;
+    left: 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff; /* Brand color for consistency */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #333; /* Darker text for better readability */
+}
+
+.hero .button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 20px 0; /* Add spacing around button */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.hero .button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

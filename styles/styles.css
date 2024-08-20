@@ -1,0 +1,65 @@
+/* Base Styles */
+@import url('base/base.css');
+
+/* Layout Styles */
+@import url('layout/layout.css');
+
+/* Component Styles */
+@import url('components/buttons.css');
+@import url('components/cards.css');
+
+/* Page-Specific Styles */
+@import url('pages/home.css');
+
+/* Theme Styles */
+@import url('themes/dark.css');
+
+/* Utility Classes */
+@import url('utilities/utilities.css');
+
+/* Vendor Styles */
+/* Add vendor styles if necessary, e.g., Bootstrap, FontAwesome */
+/* @import url('vendors/bootstrap.css'); */
+
+/* Global Overrides and Additional Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .grid-col {
+        flex-basis: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

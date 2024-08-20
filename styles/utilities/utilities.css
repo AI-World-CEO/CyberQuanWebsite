@@ -1,0 +1,28 @@
+/* utilities/utilities.css */
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}

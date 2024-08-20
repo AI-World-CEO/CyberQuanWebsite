@@ -1,0 +1,85 @@
+/* themes/dark.css */
+
+/* Dark Theme Styles */
+
+/* General Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    background: url('../assets/images/dark-background-pattern.png') repeat center center; /* Optional dark theme background */
+    background-size: cover;
+}
+
+/* Navbar and Footer Styles */
+.navbar.dark-mode,
+.footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Anchor Links */
+a.dark-mode {
+    color: #64b5f6;
+}
+
+a.dark-mode:hover {
+    color: #90caf9;
+    text-decoration: underline; /* Ensure visibility of links */
+}
+
+/* Button Styles */
+.button.dark-mode {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+
+.button.dark-mode:hover {
+    background-color: #555555;
+}
+
+/* Hero Section */
+.hero.dark-mode {
+    background-color: #1c1c1c;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
+    border-radius: 10px;
+}
+
+/* Decorative Edge Designs for Dark Theme */
+.hero.dark-mode::before, .hero.dark-mode::after {
+    background: url('../assets/images/dark-hero-edge.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero.dark-mode h1 {
+    color: #bb86fc; /* Lighter color for better contrast */
+}
+
+.hero.dark-mode p {
+    color: #e0e0e0;
+}
+
+/* Additional Component Adjustments */
+.card.dark-mode {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.card.dark-mode .card-title {
+    color: #bb86fc;
+}
+
+.card.dark-mode .card-text {
+    color: #b0b0b0;
+}
+
+/* Utility Classes for Dark Mode */
+.text-center.dark-mode {
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero.dark-mode {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+}
