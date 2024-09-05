@@ -80,7 +80,6 @@ $(document).ready(function () {
         let demoToClone = $(this).siblings('.demo').clone();
         demoToClone.removeClass('hidden');
         $('.appsModal').append('<div class="closeModalDiv"></div>');
-        console.log();
         $('.appsModal .closeModalDiv').append(demoHeader);
         $('.appsModal .closeModalDiv').append(`<button class='closeX closeAppModel'>close</button>`);
         $('.appsModal').append(demoToClone);
@@ -102,11 +101,51 @@ $(document).ready(function () {
         `);
     }
     function toggleCloseAppModel() {
-        console.log('testest')
         $('body').css('overflow', 'auto');
         $(".appBackdropSec").toggle("active");
     }
     $(".appBackdrop").click(() => toggleCloseAppModel());
     $(document).on('click', '.closeAppModel', toggleCloseAppModel);
     $(document).on('click', '.viewAppDemo', toggleAppModal);
+
+
+
+
+    function toggleBlogModal() {
+        $('body').css('overflow', 'hidden');
+        $(".blogBackdropSec").toggle("active");
+        $('.blogModal').empty();
+        let demoHeader = $(this).closest('.card').find('h4').clone();
+        let picToClone = $(this).closest('.card').find('.blogPhoto').clone();
+        $('.blogModal').append('<div class="closeBlogModalDiv"></div>');
+        $('.blogModal').append('<div class="fillPic"></div>');
+        $('.blogModal .closeBlogModalDiv').append(demoHeader);
+        $('.blogModal .closeBlogModalDiv').append(`<button class='closeXBlog closeBlogModel'>close</button>`);
+        $('.blogModal .fillPic').append(picToClone);
+        // $('.blogModal').append(demoToClone);
+        const techStackToClone = $(this).siblings('.tech-stack').clone();
+        $('.blogModal').append(techStackToClone);
+        techStackToClone.removeClass('hidden');
+        const conclusionToClone = $(this).siblings('.blogConclusion').clone();
+        $('.blogModal').append(conclusionToClone);
+        conclusionToClone.removeClass('hidden');
+        $('.blogModal').append(`
+            <div class="btmBlogCloseDiv">
+                <a href="${$(this).closest('.workbox').find('.gitHubLink').attr('href')}" target="_blank">
+                    <span class="ico-circle">
+                        <i class="fa-brands fa-github about-ico"></i>
+                    </span>
+                </a>
+                <button class="closeBlogModel">Close</button>
+            </div>
+        `);
+    }
+
+    function toggleCloseBlogModel() {
+        $('body').css('overflow', 'auto');
+        $(".blogBackdropSec").toggle("active");
+    }
+    $(".blogBackdrop").click(() => toggleCloseBlogModel());
+    $(document).on('click', '.closeBlogModel', toggleCloseBlogModel);
+    $(document).on('click', '.viewBlog', toggleBlogModal);
 });

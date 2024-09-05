@@ -371,16 +371,19 @@ p {
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
 
-.appBackdropSec {
+.appBackdropSec,
+.blogBackdropSec {
   display: none;
 }
 
-.appBackdropSec.active {
+.appBackdropSec.active,
+.blogBackdropSec.active {
   display: block;
 
 }
 
-.appBackdrop {
+.appBackdrop,
+.blogBackdrop {
   z-index: 1030;
   position: fixed;
   width: 100vw;
@@ -393,7 +396,8 @@ p {
   align-items: center;
 }
 
-.appsModalSec {
+.appsModalSec,
+.blogModalSec {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,17 +407,17 @@ p {
   z-index: 1031;
 }
 
-.appsModal {
+.appsModal,
+.blogModal {
   border-radius: 10px;
   background: #ffffff;
   min-width: 640px;
   min-height: 771px;
   cursor: initial;
-  /* position: fixed;
-  top: 0; */
 }
 
-.appsConclusion {
+.appsConclusion,
+.blogConclusion {
   padding: 0 0 0 16px;
   max-width: 640px;
 }
@@ -459,25 +463,57 @@ p {
   display: none;
 }
 
-.closeModalDiv {
+.closeModalDiv,
+.closeBlogModalDiv {
   padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.closeModalDiv {
   border-bottom: 1px solid #2fa8f6;
 }
 
-.btmCloseDiv {
+.closeBlogModalDiv {
+  border-bottom: 1px solid #A63A78;
+}
+
+.btmCloseDiv,
+.btmBlogCloseDiv {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #2fa8f6;
 }
 
+.btmCloseDiv {
+  border-top: 1px solid #2fa8f6;
+}
+
+.btmBlogCloseDiv {
+  border-top: 1px solid #A63A78;
+}
+
 .btmCloseDiv button {
   cursor: pointer;
   color: #fff;
   background: #2fa8f6;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  padding: 16px 30px;
+  font-size: 20px;
+
+  &:hover {
+    background: red;
+  }
+}
+
+.btmBlogCloseDiv button {
+  cursor: pointer;
+  color: #fff;
+  background: #A63A78;
   border-radius: 10px;
   font-size: 20px;
   border: none;
@@ -528,4 +564,133 @@ p {
   &:after {
     transform: rotate(-45deg);
   }
+}
+
+.closeXBlog {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: transparent;
+  color: #A63A78;
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+
+  &:focus {
+    outline: solid 0 transparent;
+  }
+
+  &:hover {
+    background: #ebd9e4
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - .0625em);
+    width: .125em;
+    height: 70%;
+    border-radius: .125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: ''
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.fillPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.fillPic img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  margin-bottom: 48px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 30%;
+}
+
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tag-teal {
+  background-color: #47bcd4;
+}
+
+.tag-purple {
+  background-color: #5e76bf;
+}
+
+.tag-pink {
+  background-color: #cd5b9f;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+.readMore {
+  float: right;
+  padding: 40px 20px;
+}
+
+.readMoreBtn {
+  border: none;
+  outline: none;
+  background: #A63A78;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 1px 10px 2rem #a5417a;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  cursor: pointer;
 }
